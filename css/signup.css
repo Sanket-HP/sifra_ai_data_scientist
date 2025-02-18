@@ -1,0 +1,174 @@
+/* 🌟 General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0B0F19;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 🌟 Signup Section */
+.signup-section {
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px; /* Maximum width for the form */
+}
+
+.signup-container {
+    background-color: #1A1D2A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #4A90E2;
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #1A1D2A;
+    color: white;
+}
+
+form button {
+    background-color: #4A90E2;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #16A085;
+}
+
+.or {
+    margin: 20px 0;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.social-signup button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #fff;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-signup button:hover {
+    background-color: #4A90E2;
+    color: white;
+}
+
+.social-signup .google-btn {
+    background-color: #DB4437; /* Google color */
+}
+
+.social-signup .microsoft-btn {
+    background-color: #0078D4; /* Microsoft color */
+}
+
+.social-signup .github-btn {
+    background-color: #211F1F; /* GitHub color */
+}
+
+.social-signup button img {
+    margin-right: 10px;
+}
+
+/* 🌟 Login Link */
+.login-link {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* 🌟 Footer Section */
+footer {
+    background-color: #0D121F;
+    padding: 30px 10px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+footer .footer-section h3 {
+    font-size: 1.2rem;
+}
+
+footer .footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-section ul li {
+    margin: 5px 0;
+}
+
+footer .footer-text {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 768px) {
+    .signup-container {
+        width: 90%;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

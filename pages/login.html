@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sifra AI</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+    <!-- 🌟 Login Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login to Your Account</h2>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <span class="toggle-password" onclick="togglePassword()">👁</span>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+
+            <p class="forgot-password"><a href="forgot-password.html">Forgot Password?</a></p>
+
+            <p class="or">— OR —</p>
+
+            <!-- 🌟 Social Login Buttons -->
+            <div class="social-login">
+                <button class="google-btn">
+                    <img src="https://img.icons8.com/color/24/google-logo.png" alt="Google"> Login with Google
+                </button>
+                <button class="microsoft-btn">
+                    <img src="https://img.icons8.com/fluency/24/microsoft.png" alt="Microsoft"> Login with Microsoft
+                </button>
+                <button class="github-btn">
+                    <img src="https://img.icons8.com/ios-filled/24/github.png" alt="GitHub"> Login with GitHub
+                </button>
+            </div>
+
+            <p class="signup-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </section>
+
+    <!-- 🌟 Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Quick Links (Left) -->
+        <div class="footer-section quick-links">
+            <h3>Quick Links</h3>
+            <div class="links">
+                <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/home.png"></a>
+                <a href="#about"><img src="https://img.icons8.com/ios-filled/24/ffffff/info.png"></a>
+                <a href="#pricing"><img src="https://img.icons8.com/ios-filled/24/ffffff/money.png"></a>
+            </div>
+        </div>
+
+        <!-- Social Media (Center) -->
+        <div class="footer-section social-media">
+            <h3>Social Media</h3>
+            <div class="social-icons">
+                <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/github.png"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png"></a>
+            </div>
+        </div>
+
+        <!-- Downloads (Right) -->
+        <div class="footer-section downloads">
+            <h3>Download</h3>
+            <div class="social-icons">
+                <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/google-play.png"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/mac-os.png"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/windows-10.png"></a>
+            </div>
+        </div>
+    </div>
+    <p class="footer-text">© 2025 Sifra AI. All Rights Reserved.</p>
+</footer>
+
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>
