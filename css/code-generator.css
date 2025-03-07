@@ -1,7 +1,7 @@
 /* 🌟 General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #1A1D2A; /* Dark theme */
+    background-color: #1A1D2A;
     color: white;
     margin: 0;
     padding: 0;
@@ -13,12 +13,50 @@ body {
     height: 100vh;
 }
 
+/* 🌟 Menu Bar */
+.menu-bar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.menu-btn {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.menu-links {
+    display: none;
+    list-style: none;
+    background-color: #222;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+.menu-links li {
+    padding: 10px;
+}
+.menu-links li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+.menu-btn:hover + .menu-links, .menu-links:hover {
+    display: block;
+}
+
 /* 🌟 Code Generation Section */
 .code-generation-section {
     max-width: 900px;
     margin-top: 50px;
     padding: 30px;
-    background-color: #25283D;
+    background-color: #1A1D2A;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
     width: 100%;
@@ -28,104 +66,80 @@ body {
 /* 🌟 Code Cell Style (Google Colab / Jupyter Notebook Style) */
 .code-cell {
     margin-bottom: 30px;
-    padding: 15px;
-    background-color: #333;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
 }
-
 .code-cell h3 {
     font-size: 1.2rem;
     color: #4A90E2;
     margin-bottom: 10px;
 }
-
 .code-area {
     width: 100%;
     height: 150px;
     padding: 15px;
-    background-color: #222;
+    background-color: #333;
     color: white;
     font-family: monospace;
     font-size: 1rem;
-    border: 1px solid #444;
+    border: none;
     border-radius: 5px;
     resize: none;
 }
-
-/* 🌟 Output Area */
 .output {
     margin-top: 10px;
     padding: 10px;
-    background-color: #2A2D3E;
+    background-color: #1A1D2A;
     border-radius: 5px;
-    border: 1px solid #555;
+    border: 1px solid #ccc;
 }
-
 .output p {
     font-size: 1rem;
     color: #8dc63f;
 }
 
-/* 🌟 Prompt & Dataset Upload Section */
-label {
-    font-size: 1rem;
-    color: #ddd;
-    display: block;
-    margin-top: 15px;
-}
-
-#language, #prompt, #dataset {
+/* 🌟 Prompt Box at the Bottom */
+.prompt-box {
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #555;
-    border-radius: 5px;
-    background-color: #222;
-    color: white;
-    font-size: 1rem;
-}
-
-#prompt {
-    height: 80px;
-    resize: vertical;
-}
-
-/* 🌟 Save & Share Section */
-.actions {
+    background: linear-gradient(45deg, #4A90E2, #16A085);
+    padding: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
-    margin-top: 20px;
-    flex-wrap: wrap;
+    animation: slideUp 0.5s ease-in-out;
 }
 
-.save-to-github-btn, .btn {
-    background-color: #4A90E2;
-    color: white;
-    padding: 12px 24px;
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.prompt-box select, .prompt-box textarea, .prompt-box button {
+    padding: 10px;
     font-size: 1rem;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    width: 100%;
-    max-width: 300px;
 }
-
-.save-to-github-btn:hover, .btn:hover {
-    background-color: #16A085;
+.prompt-box select {
+    background-color: white;
+    color: black;
 }
-
-/* 🌟 Responsive Design */
-@media (max-width: 768px) {
-    .code-generation-section {
-        width: 90%;
-        padding: 20px;
-    }
-
-    .save-to-github-btn, .btn {
-        width: 100%;
-    }
+.prompt-box textarea {
+    width: 300px;
+    height: 50px;
+    resize: none;
+}
+.prompt-box button {
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.prompt-box button:hover {
+    background-color: #ccc;
 }
