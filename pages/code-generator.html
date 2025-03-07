@@ -7,66 +7,44 @@
     <link rel="stylesheet" href="../css/code-generator.css">
 </head>
 <body>
-
+    
     <!-- 🌟 Code Generation Section -->
     <section class="code-generation-section">
         <div class="container">
             <h2>Generated Code</h2>
+            
+            <!-- 🌟 Programming Language Selection -->
+            <label for="language">Choose a Programming Language:</label>
+            <select id="language">
+                <option value="python">Python</option>
+                <option value="r">R</option>
+                <option value="sql">SQL</option>
+            </select>
 
-            <!-- 🌟 Code Display Area (Google Colab / Jupyter Notebook style cells) -->
+            <!-- 🌟 User Prompt Input -->
+            <label for="prompt">Enter Your Prompt:</label>
+            <textarea id="prompt" rows="3" placeholder="Describe what you want the code to do..."></textarea>
+            <button class="btn generate-code-btn">Generate Code</button>
+            
+            <!-- 🌟 Dataset Upload Section -->
+            <label for="dataset">Upload Dataset (CSV only):</label>
+            <input type="file" id="dataset" accept=".csv">
+            
+            <!-- 🌟 Code Display Area -->
             <div class="code-cell">
-                <h3>Cell 1: Import Libraries</h3>
-                <textarea class="code-area" readonly>
-import numpy as np
-import pandas as pd
-                </textarea>
+                <h3>Generated Code</h3>
+                <textarea class="code-area" readonly></textarea>
                 <div class="output">
-                    <p>Output: Libraries imported successfully</p>
+                    <p>Output will be displayed here...</p>
                 </div>
             </div>
-
-            <div class="code-cell">
-                <h3>Cell 2: Data Loading</h3>
-                <textarea class="code-area" readonly>
-data = pd.read_csv('your_dataset.csv')
-                </textarea>
-                <div class="output">
-                    <p>Output: Dataset loaded with shape (1000, 5)</p>
-                </div>
-            </div>
-
-            <div class="code-cell">
-                <h3>Cell 3: Data Processing</h3>
-                <textarea class="code-area" readonly>
-data['column_name'] = data['column_name'].apply(lambda x: x.lower())
-                </textarea>
-                <div class="output">
-                    <p>Output: Column processed</p>
-                </div>
-            </div>
-
-            <div class="code-cell">
-                <h3>Cell 4: Model Training</h3>
-                <textarea class="code-area" readonly>
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-
-X_train, X_test, y_train, y_test = train_test_split(data.drop('target', axis=1), data['target'], test_size=0.2)
-model = LogisticRegression()
-model.fit(X_train, y_train)
-                </textarea>
-                <div class="output">
-                    <p>Output: Model trained successfully</p>
-                </div>
-            </div>
-
-            <!-- 🌟 Save to GitHub Section (visible only when needed) -->
+            
+            <!-- 🌟 Save & Share Section -->
             <div class="actions">
-                <button class="btn save-to-github-btn" onclick="saveToGitHub()">Save to GitHub</button>
+                <button class="btn save-to-github-btn">Save to GitHub</button>
+                <a href="https://www.kaggle.com/" class="btn" target="_blank">Save to Kaggle</a>
             </div>
-
         </div>
     </section>
-
 </body>
 </html>
